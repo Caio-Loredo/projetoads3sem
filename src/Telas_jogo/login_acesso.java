@@ -22,10 +22,10 @@ public class login_acesso extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nome_login = new javax.swing.JLabel();
+        nomelogin_campo = new javax.swing.JTextField();
         RGM = new javax.swing.JLabel();
         rgm_campo = new javax.swing.JTextField();
-        senha = new javax.swing.JLabel();
-        Password = new javax.swing.JPasswordField();
         conectar = new javax.swing.JButton();
         cancelar = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
@@ -35,26 +35,19 @@ public class login_acesso extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
+        nome_login.setForeground(new java.awt.Color(255, 255, 255));
+        nome_login.setText("Nome:");
+        getContentPane().add(nome_login);
+        nome_login.setBounds(190, 160, 40, 40);
+        getContentPane().add(nomelogin_campo);
+        nomelogin_campo.setBounds(230, 170, 120, 20);
+
         RGM.setForeground(new java.awt.Color(255, 255, 255));
         RGM.setText("RGM:");
         getContentPane().add(RGM);
         RGM.setBounds(190, 120, 30, 40);
         getContentPane().add(rgm_campo);
         rgm_campo.setBounds(220, 130, 120, 20);
-
-        senha.setForeground(new java.awt.Color(255, 255, 255));
-        senha.setText("Senha:");
-        getContentPane().add(senha);
-        senha.setBounds(190, 180, 34, 14);
-
-        Password.setToolTipText("");
-        Password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasswordActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Password);
-        Password.setBounds(230, 180, 120, 20);
 
         conectar.setText("Conectar");
         conectar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,10 +91,6 @@ public class login_acesso extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelarActionPerformed
 
-    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordActionPerformed
-
   
     public static void main(String args[]) {
         
@@ -113,12 +102,12 @@ public class login_acesso extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField Password;
     private javax.swing.JLabel RGM;
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton cancelar;
     private javax.swing.JButton conectar;
+    private javax.swing.JLabel nome_login;
+    private javax.swing.JTextField nomelogin_campo;
     private javax.swing.JTextField rgm_campo;
-    private javax.swing.JLabel senha;
     // End of variables declaration//GEN-END:variables
 }
