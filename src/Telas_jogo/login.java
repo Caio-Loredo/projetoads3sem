@@ -40,6 +40,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(login);
         login.setBounds(260, 250, 130, 50);
 
+        cadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btncadastro.png"))); // NOI18N
         cadastro.setText("Cadastrar");
         cadastro.setMaximumSize(new java.awt.Dimension(57, 23));
         cadastro.setMinimumSize(new java.awt.Dimension(57, 23));
@@ -50,7 +51,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastro);
-        cadastro.setBounds(420, 250, 130, 50);
+        cadastro.setBounds(410, 250, 180, 50);
         cadastro.getAccessibleContext().setAccessibleName("cadastrar");
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG_Game.png"))); // NOI18N

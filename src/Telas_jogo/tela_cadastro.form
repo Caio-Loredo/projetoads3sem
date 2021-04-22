@@ -134,6 +134,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="voltar_tela">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/btnvoltar.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
       <Events>
@@ -141,17 +144,20 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="400" y="400" width="140" height="50"/>
+          <AbsoluteConstraints x="430" y="390" width="180" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="cadastrar">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/btncadastro.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="400" width="140" height="50"/>
+          <AbsoluteConstraints x="170" y="390" width="180" height="50"/>
         </Constraint>
       </Constraints>
     </Component>

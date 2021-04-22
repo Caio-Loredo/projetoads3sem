@@ -77,6 +77,7 @@ public class tela_cadastro extends javax.swing.JFrame {
         getContentPane().add(cadastro_senha);
         cadastro_senha.setBounds(220, 250, 130, 20);
 
+        voltar_tela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnvoltar.png"))); // NOI18N
         voltar_tela.setText("Voltar");
         voltar_tela.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,11 +85,12 @@ public class tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltar_tela);
-        voltar_tela.setBounds(400, 400, 140, 50);
+        voltar_tela.setBounds(430, 390, 180, 50);
 
+        cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btncadastro.png"))); // NOI18N
         cadastrar.setText("Cadastrar");
         getContentPane().add(cadastrar);
-        cadastrar.setBounds(210, 400, 140, 50);
+        cadastrar.setBounds(170, 390, 180, 50);
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
