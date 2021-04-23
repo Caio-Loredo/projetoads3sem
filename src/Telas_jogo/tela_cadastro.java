@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 public class tela_cadastro extends javax.swing.JFrame {
 
+    cadastro_jogador cj = new cadastro_jogador();
     
     public tela_cadastro() {
         initComponents();
@@ -30,8 +31,6 @@ public class tela_cadastro extends javax.swing.JFrame {
         cadastro_curso = new javax.swing.JTextField();
         semestre = new javax.swing.JLabel();
         cadastro_semestre = new javax.swing.JTextField();
-        senha = new javax.swing.JLabel();
-        cadastro_senha = new javax.swing.JTextField();
         voltar_tela = new javax.swing.JButton();
         cadastrar = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
@@ -45,6 +44,12 @@ public class tela_cadastro extends javax.swing.JFrame {
         nome.setText("Nome completo:");
         getContentPane().add(nome);
         nome.setBounds(180, 130, 80, 14);
+
+        cadastro_nome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastro_nomeActionPerformed(evt);
+            }
+        });
         getContentPane().add(cadastro_nome);
         cadastro_nome.setBounds(270, 130, 220, 20);
 
@@ -59,9 +64,9 @@ public class tela_cadastro extends javax.swing.JFrame {
         Curso.setForeground(new java.awt.Color(255, 255, 255));
         Curso.setText("Curso:");
         getContentPane().add(Curso);
-        Curso.setBounds(180, 190, 32, 14);
+        Curso.setBounds(180, 190, 50, 14);
         getContentPane().add(cadastro_curso);
-        cadastro_curso.setBounds(220, 190, 130, 20);
+        cadastro_curso.setBounds(230, 190, 130, 20);
 
         semestre.setForeground(new java.awt.Color(255, 255, 255));
         semestre.setText("Semestre:");
@@ -69,13 +74,6 @@ public class tela_cadastro extends javax.swing.JFrame {
         semestre.setBounds(180, 220, 60, 14);
         getContentPane().add(cadastro_semestre);
         cadastro_semestre.setBounds(240, 220, 110, 20);
-
-        senha.setForeground(new java.awt.Color(255, 255, 255));
-        senha.setText("Senha:");
-        getContentPane().add(senha);
-        senha.setBounds(180, 250, 34, 14);
-        getContentPane().add(cadastro_senha);
-        cadastro_senha.setBounds(220, 250, 130, 20);
 
         voltar_tela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnvoltar.png"))); // NOI18N
         voltar_tela.setText("Voltar");
@@ -89,6 +87,11 @@ public class tela_cadastro extends javax.swing.JFrame {
 
         cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btncadastro.png"))); // NOI18N
         cadastrar.setText("Cadastrar");
+        cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(cadastrar);
         cadastrar.setBounds(170, 390, 180, 50);
 
@@ -105,10 +108,29 @@ public class tela_cadastro extends javax.swing.JFrame {
 
     private void voltar_telaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar_telaActionPerformed
         // TODO add your handling code here:
-        login var = new login();
-        var.setVisible(true);
-        dispose();
+       login_acesso var = new login_acesso();
+               var.setVisible(true);
+               dispose();
     }//GEN-LAST:event_voltar_telaActionPerformed
+
+    private void cadastro_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastro_nomeActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_cadastro_nomeActionPerformed
+
+    private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
+        // TODO add your handling code here:
+       String c_nomecompleto = this.cadastro_nome.getText();
+       int c_RGM = Integer.parseInt(this.cadastro_rgm.getText());
+       String c_Curso = this.cadastro_curso.getText();
+       int c_Semestre= Integer.parseInt(this.cadastro_semestre.getText());
+       this.cadastro_nome.setText("");
+       this.cadastro_rgm.setText("");
+       this.cadastro_semestre.setText("");
+       this.cadastro_curso.setText("");
+       cj.cadastrar_dados(c_nomecompleto, c_Curso, c_RGM, c_Semestre);
+       JOptionPane.showMessageDialog(null,"Aluno cadastrado com sucesso ");
+    }//GEN-LAST:event_cadastrarActionPerformed
 
   
     public static void main(String args[]) {
@@ -128,11 +150,9 @@ public class tela_cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField cadastro_nome;
     private javax.swing.JTextField cadastro_rgm;
     private javax.swing.JTextField cadastro_semestre;
-    private javax.swing.JTextField cadastro_senha;
     private javax.swing.JLabel nome;
     private javax.swing.JLabel rgm;
     private javax.swing.JLabel semestre;
-    private javax.swing.JLabel senha;
     private javax.swing.JButton voltar_tela;
     // End of variables declaration//GEN-END:variables
 }
