@@ -116,11 +116,12 @@ public class login_acesso extends javax.swing.JFrame {
        id_nome = nomelogin_campo.getText();
        int id_RGM;
        id_RGM = Integer.parseInt(this.rgm_campo.getText());
-       
-       if(id_nome.equals(CJ.cadastro_Nome) && id_RGM.equals(CJ.cadastro_rgm)){
+       int IDrgm = CJ.cadastro_rgm;
+       if(id_nome.equals(CJ.cadastro_Nome) && id_RGM == IDrgm ){
           JOptionPane.showMessageDialog(null,"Aluno logado com sucesso!!");
            
        } else {
+           JOptionPane.showMessageDialog(null,"");
        }
        
     }//GEN-LAST:event_conectarActionPerformed
