@@ -129,7 +129,7 @@ public class tela_cadastro extends javax.swing.JFrame {
        this.cadastro_semestre.setText("");
        this.cadastro_curso.setText("");
        cj.cadastrar_dados(c_nomecompleto, c_Curso, c_RGM, c_Semestre);
-       JOptionPane.showMessageDialog(null,"Aluno cadastrado com sucesso ");
+       JOptionPane.showMessageDialog(null,"Aluno:"+c_nomecompleto+"\nRGM: "+"\nCurso: "+c_Curso+"\nSemestre: "+c_Semestre + "cadastrado com sucesso ");
     }//GEN-LAST:event_cadastrarActionPerformed
 
   

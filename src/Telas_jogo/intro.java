@@ -30,7 +30,6 @@ public class intro extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Btn back_1.png"))); // NOI18N
         jButton1.setText("jButton1");
         getContentPane().add(jButton1);
         jButton1.setBounds(310, 350, 390, 170);
