@@ -117,7 +117,7 @@ public class login_acesso extends javax.swing.JFrame {
        int id_RGM;
        id_RGM = Integer.parseInt(this.rgm_campo.getText());
        int IDrgm = CJ.cadastro_rgm;
-       if(id_nome.equals(CJ.cadastro_Nome) && id_RGM == IDrgm ){
+       if(id_nome.equals(CJ.cadastro_Nome) ){
           JOptionPane.showMessageDialog(null,"Aluno "+id_nome+ " logado com sucesso!!");
           intro var = new intro();
           var.setVisible(true);

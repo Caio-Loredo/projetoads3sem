@@ -2,6 +2,9 @@
 package Telas_jogo;
 
 import static java.lang.Thread.sleep;
+import static java.lang.Thread.sleep;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -23,14 +26,20 @@ public class tela_cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        name_login = new javax.swing.JLabel();
+        login_nome = new javax.swing.JTextField();
+        login_RGM = new javax.swing.JLabel();
+        login_rgm = new javax.swing.JTextField();
         nome = new javax.swing.JLabel();
         cadastro_nome = new javax.swing.JTextField();
         rgm = new javax.swing.JLabel();
         cadastro_rgm = new javax.swing.JTextField();
         Curso = new javax.swing.JLabel();
         cadastro_curso = new javax.swing.JTextField();
+        Login_btn = new javax.swing.JButton();
         semestre = new javax.swing.JLabel();
         cadastro_semestre = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
         voltar_tela = new javax.swing.JButton();
         cadastrar = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
@@ -40,10 +49,24 @@ public class tela_cadastro extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
+        name_login.setForeground(new java.awt.Color(255, 255, 255));
+        name_login.setText("Nome do Aluno:");
+        getContentPane().add(name_login);
+        name_login.setBounds(190, 130, 90, 14);
+        getContentPane().add(login_nome);
+        login_nome.setBounds(280, 130, 190, 20);
+
+        login_RGM.setForeground(new java.awt.Color(255, 255, 255));
+        login_RGM.setText("RGM:");
+        getContentPane().add(login_RGM);
+        login_RGM.setBounds(190, 170, 26, 14);
+        getContentPane().add(login_rgm);
+        login_rgm.setBounds(230, 170, 100, 20);
+
         nome.setForeground(new java.awt.Color(255, 255, 255));
         nome.setText("Nome completo:");
         getContentPane().add(nome);
-        nome.setBounds(180, 130, 80, 14);
+        nome.setBounds(180, 250, 80, 14);
 
         cadastro_nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,29 +74,42 @@ public class tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastro_nome);
-        cadastro_nome.setBounds(270, 130, 220, 20);
+        cadastro_nome.setBounds(270, 250, 220, 20);
 
         rgm.setBackground(new java.awt.Color(255, 255, 255));
         rgm.setForeground(new java.awt.Color(255, 255, 255));
         rgm.setText("RGM:");
         getContentPane().add(rgm);
-        rgm.setBounds(180, 160, 30, 14);
+        rgm.setBounds(180, 280, 30, 14);
         getContentPane().add(cadastro_rgm);
-        cadastro_rgm.setBounds(220, 160, 130, 20);
+        cadastro_rgm.setBounds(220, 280, 130, 20);
 
         Curso.setForeground(new java.awt.Color(255, 255, 255));
         Curso.setText("Curso:");
         getContentPane().add(Curso);
-        Curso.setBounds(180, 190, 50, 14);
+        Curso.setBounds(180, 310, 50, 14);
         getContentPane().add(cadastro_curso);
-        cadastro_curso.setBounds(230, 190, 130, 20);
+        cadastro_curso.setBounds(230, 310, 130, 20);
+
+        Login_btn.setText("Entrar");
+        Login_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Login_btnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Login_btn);
+        Login_btn.setBounds(540, 160, 180, 50);
 
         semestre.setForeground(new java.awt.Color(255, 255, 255));
         semestre.setText("Semestre:");
         getContentPane().add(semestre);
-        semestre.setBounds(180, 220, 60, 14);
+        semestre.setBounds(180, 340, 60, 14);
         getContentPane().add(cadastro_semestre);
-        cadastro_semestre.setBounds(240, 220, 110, 20);
+        cadastro_semestre.setBounds(240, 340, 110, 20);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(180, 220, 540, 10);
 
         voltar_tela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnvoltar.png"))); // NOI18N
         voltar_tela.setText("Voltar");
@@ -83,7 +119,7 @@ public class tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltar_tela);
-        voltar_tela.setBounds(430, 390, 180, 50);
+        voltar_tela.setBounds(80, 400, 180, 50);
 
         cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btncadastro.png"))); // NOI18N
         cadastrar.setText("Cadastrar");
@@ -93,7 +129,7 @@ public class tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastrar);
-        cadastrar.setBounds(170, 390, 180, 50);
+        cadastrar.setBounds(540, 320, 180, 50);
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
@@ -120,7 +156,7 @@ public class tela_cadastro extends javax.swing.JFrame {
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
         // TODO add your handling code here:
-       String c_nomecompleto = this.cadastro_nome.getText();
+     String c_nomecompleto = this.cadastro_nome.getText();
        int c_RGM = Integer.parseInt(this.cadastro_rgm.getText());
        String c_Curso = this.cadastro_curso.getText();
        int c_Semestre= Integer.parseInt(this.cadastro_semestre.getText());
@@ -129,8 +165,33 @@ public class tela_cadastro extends javax.swing.JFrame {
        this.cadastro_semestre.setText("");
        this.cadastro_curso.setText("");
        cj.cadastrar_dados(c_nomecompleto, c_Curso, c_RGM, c_Semestre);
-       JOptionPane.showMessageDialog(null,"Aluno:"+c_nomecompleto+"\nRGM: "+"\nCurso: "+c_Curso+"\nSemestre: "+c_Semestre + "cadastrado com sucesso ");
+       JOptionPane.showMessageDialog(null,"Aluno:"+c_nomecompleto+"\nRGM: "+c_RGM+"\nCurso: "+c_Curso+"\nSemestre: "+c_Semestre + "cadastrado com sucesso ");
     }//GEN-LAST:event_cadastrarActionPerformed
+
+    private void Login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_btnActionPerformed
+        // TODO add your handling code here:
+        String nomealuno;
+        nomealuno = this.login_nome.getText();
+        int rgmaluno;
+        rgmaluno = Integer.parseInt(this.login_rgm.getText());
+        if(nomealuno.equals(cj.cadastro_Nome ) ){
+            if(rgmaluno == cj.cadastro_rgm){
+            JOptionPane.showMessageDialog(null,"Aluno "+nomealuno+ " logado com sucesso!!");
+           try{ 
+               sleep(20);
+          intro var = new intro();
+          var.setVisible(true);
+          dispose();
+           }
+           catch (InterruptedException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao carregar login");
+                }
+            }
+        } 
+        else {
+            
+        }
+    }//GEN-LAST:event_Login_btnActionPerformed
 
   
     public static void main(String args[]) {
@@ -144,12 +205,18 @@ public class tela_cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Curso;
+    private javax.swing.JButton Login_btn;
     private javax.swing.JLabel Splash_BG;
-    private javax.swing.JButton cadastrar;
+    public javax.swing.JButton cadastrar;
     private javax.swing.JTextField cadastro_curso;
     private javax.swing.JTextField cadastro_nome;
     private javax.swing.JTextField cadastro_rgm;
     private javax.swing.JTextField cadastro_semestre;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel login_RGM;
+    private javax.swing.JTextField login_nome;
+    private javax.swing.JTextField login_rgm;
+    private javax.swing.JLabel name_login;
     private javax.swing.JLabel nome;
     private javax.swing.JLabel rgm;
     private javax.swing.JLabel semestre;

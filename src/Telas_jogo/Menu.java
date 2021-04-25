@@ -77,7 +77,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarActionPerformed
         // TODO add your handling code here:
-        login_acesso var = new login_acesso();
+        tela_cadastro var = new tela_cadastro();
                var.setVisible(true);
                dispose();
     }//GEN-LAST:event_jogarActionPerformed
