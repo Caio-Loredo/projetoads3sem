@@ -189,8 +189,10 @@ public class tela_cadastro extends javax.swing.JFrame {
             }
         } 
         else {
-            
+            JOptionPane.showMessageDialog(null,"Nome ou RGM incorretos tente novamente");
         }
+        this.login_rgm.setText("");
+        this.login_nome.setText("");
     }//GEN-LAST:event_Login_btnActionPerformed
 
   
