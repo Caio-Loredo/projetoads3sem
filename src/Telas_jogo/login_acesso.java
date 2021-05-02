@@ -118,10 +118,12 @@ public class login_acesso extends javax.swing.JFrame {
        id_RGM = Integer.parseInt(this.rgm_campo.getText());
        int IDrgm = CJ.cadastro_rgm;
        if(id_nome.equals(CJ.cadastro_Nome) ){
+           if(id_RGM ==CJ.cadastro_rgm){
           JOptionPane.showMessageDialog(null,"Aluno "+id_nome+ " logado com sucesso!!");
           intro var = new intro();
           var.setVisible(true);
           dispose();
+           }
        }
        else {
            JOptionPane.showMessageDialog(null,"Nome ou RGM não não reconhecidos,favor colocar dados cadastrados");
