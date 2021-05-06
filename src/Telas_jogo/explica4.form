@@ -48,11 +48,23 @@
               <Font name="Segoe UI" size="13" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Ol&#xe1; aluno, bem vindo  ao laborat&#xf3;rio de cria&#xe7;&#xe3;o e implementa&#xe7;&#xe3;o de testes ao rob&#xf4; que&#xa;aprende novas atividades conforme voc&#xea; adiciona em formato de c&#xf3;digo em sua mem&#xf3;ria.&#xa;No atual momento estamos ensinando a calcular fun&#xe7;&#xf5;es, por favor nos ajude com essa&#xa;tarefa.&#xa;Nas pr&#xf3;ximas telas ter&#xe3;o breves explica&#xe7;&#xf5;es para que voc&#xea; n&#xe3;o fique perdido nas ativida&#xa;des."/>
+            <Property name="text" type="java.lang.String" value="USANDO FUN&#xc7;&#xd5;ES NA PR&#xc1;TICA!&#xa;&#xa;algoritmo &quot;Hipotenusa&quot;&#xa;var&#xa;    a, b, c : REAL&#xa;inicio&#xa;      ESCREVA (&quot;Digite o lado A do tri&#xe2;ngulo ret&#xe2;ngulo: &quot;)&#xa;      LEIA (a)&#xa;      ESCREVA (&quot;Digite o lado B do tri&#xe2;ngulo ret&#xe2;ngulo: &quot;)&#xa;      LEIA (b)&#xa;      c := RAIZQ ( a*a + b*b )//C&#xe1;lculo da hipotenusa utilizando a FUN&#xc7;&#xc3;O RAIZQ,&#xa;      ESCREVA (&quot;O valor da hipotenusa &#xe9;: &quot;, c)&#xa;fimalgoritmo"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/btnAnterior.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="570" y="410" width="60" height="80"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -61,7 +73,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="650" y="390" width="60" height="80"/>
+          <AbsoluteConstraints x="670" y="410" width="60" height="80"/>
         </Constraint>
       </Constraints>
     </Component>

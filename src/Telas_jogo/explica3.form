@@ -48,11 +48,23 @@
               <Font name="Segoe UI" size="13" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Ol&#xe1; aluno, bem vindo  ao laborat&#xf3;rio de cria&#xe7;&#xe3;o e implementa&#xe7;&#xe3;o de testes ao rob&#xf4; que&#xa;aprende novas atividades conforme voc&#xea; adiciona em formato de c&#xf3;digo em sua mem&#xf3;ria.&#xa;No atual momento estamos ensinando a calcular fun&#xe7;&#xf5;es, por favor nos ajude com essa&#xa;tarefa.&#xa;Nas pr&#xf3;ximas telas ter&#xe3;o breves explica&#xe7;&#xf5;es para que voc&#xea; n&#xe3;o fique perdido nas ativida&#xa;des."/>
+            <Property name="text" type="java.lang.String" value="PAR&#xc2;METROS&#xa;Fun&#xe7;&#xf5;es (e procedimentos) podem ou n&#xe3;o receber par&#xe2;metros. No caso da fun&#xe7;&#xe3;o de raiz&#xa;quadrada, &#xe9; necess&#xe1;rio passar como par&#xe2;metro o n&#xfa;mero que se deseja calcular a raiz,&#xa;o procedimento ESCREVA, requer um texto como par&#xe2;metro para apresentar na tela do&#xa;usu&#xe1;rio."/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/btnAnterior.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="570" y="410" width="60" height="80"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -61,7 +73,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="650" y="390" width="60" height="80"/>
+          <AbsoluteConstraints x="670" y="410" width="60" height="80"/>
         </Constraint>
       </Constraints>
     </Component>

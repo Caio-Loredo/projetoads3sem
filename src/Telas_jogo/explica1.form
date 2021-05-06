@@ -48,11 +48,23 @@
               <Font name="Segoe UI" size="13" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Ol&#xe1; aluno, bem vindo  ao laborat&#xf3;rio de cria&#xe7;&#xe3;o e implementa&#xe7;&#xe3;o de testes ao rob&#xf4; que&#xa;aprende novas atividades conforme voc&#xea; adiciona em formato de c&#xf3;digo em sua mem&#xf3;ria.&#xa;No atual momento estamos ensinando a calcular fun&#xe7;&#xf5;es, por favor nos ajude com essa&#xa;tarefa.&#xa;Nas pr&#xf3;ximas telas ter&#xe3;o breves explica&#xe7;&#xf5;es para que voc&#xea; n&#xe3;o fique perdido nas ativida&#xa;des."/>
+            <Property name="text" type="java.lang.String" value="FUN&#xc7;&#xc3;O OU PROCEDIMENTO?&#xa;As fun&#xe7;&#xf5;es (functions), tamb&#xe9;m conhecidas como  sub-rotinas, s&#xe3;o muito utilizadas em &#xa;programa&#xe7;&#xe3;o. Um dos grandes benef&#xed;cios &#xe9; n&#xe3;o precisar copiar o c&#xf3;digo todas as vezes &#xa;que precisar executar aquela opera&#xe7;&#xe3;o, al&#xe9;m de deixar a leitura do c&#xf3;digo mais intuitiva. &#xa;No exemplo anterior, caso precis&#xe1;ssemos descobrir a raiz quadrada de 10 n&#xfa;meros, &#xa;bastaria chamar a fun&#xe7;&#xe3;o que calcula a raiz quadrada 10 vezes.&#xa;&#xa;Os procedimentos (procedures) diferem das fun&#xe7;&#xf5;es apenas por n&#xe3;o retornarem resultado,&#xa;imagine um procedimento que envia e-mail. Precisa retornar resultado? Nos algoritmos &#xa;apresentados aqui no { Dicas de Programa&#xe7;&#xe3;o } n&#xf3;s j&#xe1; utilizamos muitos procedimentos &#xa;sem perceber. Por exemplo, para ler o valor digitado por um usu&#xe1;rio n&#xf3;s j&#xe1; utilizamos o &#xa;procedimento LEIA e para mostrar um texto na tela n&#xf3;s utilizamos o procedimento &#xa;ESCREVA."/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/btnAnterior.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="570" y="410" width="60" height="80"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -61,7 +73,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="650" y="390" width="60" height="80"/>
+          <AbsoluteConstraints x="670" y="410" width="60" height="80"/>
         </Constraint>
       </Constraints>
     </Component>

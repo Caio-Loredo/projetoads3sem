@@ -6,10 +6,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
-public class intro extends javax.swing.JFrame {
+public class explica2 extends javax.swing.JFrame {
 
     
-    public intro() {
+    public explica2() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
         
@@ -24,6 +24,7 @@ public class intro extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
 
@@ -35,15 +36,19 @@ public class intro extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Olá aluno, bem vindo  ao laboratório de criação e implementação de testes ao robô que\naprende novas atividades conforme você adiciona em formato de código em sua memória.\nNo atual momento estamos ensinando a calcular funções, por favor nos ajude com essa\ntarefa.\nNas próximas telas terão breves explicações para que você não fique perdido nas ativida\ndes.");
+        jTextArea1.setText("PARÂMETROS\nFunções (e procedimentos) podem ou não receber parâmetros. No caso da função de raiz\nquadrada, é necessário passar como parâmetro o número que se deseja calcular a raiz,\no procedimento ESCREVA, requer um texto como parâmetro para apresentar na tela do\nusuário.");
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(180, 110, 540, 260);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnAnterior.png"))); // NOI18N
+        getContentPane().add(jButton2);
+        jButton2.setBounds(570, 410, 60, 80);
+
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnProximo.png"))); // NOI18N
         getContentPane().add(jButton1);
-        jButton1.setBounds(650, 390, 60, 80);
+        jButton1.setBounds(670, 410, 60, 80);
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
@@ -61,7 +66,7 @@ public class intro extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new intro().setVisible(true);
+                new explica2().setVisible(true);
             }
         });
     }
@@ -69,6 +74,7 @@ public class intro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
