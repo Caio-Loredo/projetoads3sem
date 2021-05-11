@@ -89,7 +89,7 @@ public class tela_cadastro extends javax.swing.JFrame {
         getContentPane().add(Curso);
         Curso.setBounds(180, 310, 50, 14);
         getContentPane().add(cadastro_curso);
-        cadastro_curso.setBounds(230, 310, 130, 20);
+        cadastro_curso.setBounds(220, 310, 130, 20);
 
         Login_btn.setText("Entrar");
         Login_btn.addActionListener(new java.awt.event.ActionListener() {

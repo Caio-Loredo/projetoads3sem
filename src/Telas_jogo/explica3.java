@@ -43,10 +43,20 @@ public class explica3 extends javax.swing.JFrame {
         jScrollPane1.setBounds(180, 110, 540, 260);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnAnterior.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(570, 410, 60, 80);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnProximo.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(670, 410, 60, 80);
 
@@ -60,6 +70,20 @@ public class explica3 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        explica4 var = new explica4();
+          var.setVisible(true);
+          dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        explica2 var = new explica2();
+          var.setVisible(true);
+          dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
   
     public static void main(String args[]) {

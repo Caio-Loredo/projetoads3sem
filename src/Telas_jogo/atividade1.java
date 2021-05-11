@@ -6,10 +6,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
-public class explica4 extends javax.swing.JFrame {
+public class atividade1 extends javax.swing.JFrame {
 
     
-    public explica4() {
+    public atividade1() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
         
@@ -22,9 +22,6 @@ public class explica4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
 
@@ -33,24 +30,6 @@ public class explica4 extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("USANDO FUNÇÕES NA PRÁTICA!\n\nalgoritmo \"Hipotenusa\"\nvar\n    a, b, c : REAL\ninicio\n      ESCREVA (\"Digite o lado A do triângulo retângulo: \")\n      LEIA (a)\n      ESCREVA (\"Digite o lado B do triângulo retângulo: \")\n      LEIA (b)\n      c := RAIZQ ( a*a + b*b )//Cálculo da hipotenusa utilizando a FUNÇÃO RAIZQ,\n      ESCREVA (\"O valor da hipotenusa é: \", c)\nfimalgoritmo");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(180, 110, 540, 260);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnAnterior.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(570, 410, 60, 80);
-
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnProximo.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +37,7 @@ public class explica4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(670, 410, 60, 80);
+        jButton1.setBounds(650, 390, 60, 80);
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
@@ -71,16 +50,9 @@ public class explica4 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        explica3 var = new explica3();
-          var.setVisible(true);
-          dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        atividade1 var = new atividade1();
+        explica1 var = new explica1();
           var.setVisible(true);
           dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -90,7 +62,7 @@ public class explica4 extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new explica4().setVisible(true);
+                new atividade1().setVisible(true);
             }
         });
     }
@@ -98,8 +70,5 @@ public class explica4 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
