@@ -1,20 +1,15 @@
 
 package Telas_jogo;
 
-import static java.lang.Thread.sleep;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 
 public class Menu extends javax.swing.JFrame {
-
+BDcadastro controle = new BDcadastro();
     
     public Menu() {
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
-        
-        
-        
+        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage()); 
     }
 
     
@@ -25,6 +20,7 @@ public class Menu extends javax.swing.JFrame {
         jogar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         sair = new javax.swing.JButton();
+        teste_conect = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +61,15 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(sair);
         sair.setBounds(260, 370, 130, 50);
 
+        teste_conect.setText("Testar Conexao");
+        teste_conect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teste_conectActionPerformed(evt);
+            }
+        });
+        getContentPane().add(teste_conect);
+        teste_conect.setBounds(423, 210, 120, 23);
+
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG_Game.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setMinimumSize(new java.awt.Dimension(800, 630));
@@ -77,9 +82,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarActionPerformed
         // TODO add your handling code here:
-        tela_cadastro var = new tela_cadastro();
-               var.setVisible(true);
-               dispose();
+        login_acesso login= new login_acesso();
+        login.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jogarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -91,6 +96,10 @@ public class Menu extends javax.swing.JFrame {
         System.exit(0);
         
     }//GEN-LAST:event_sairActionPerformed
+
+    private void teste_conectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teste_conectActionPerformed
+        controle.Conecta();
+    }//GEN-LAST:event_teste_conectActionPerformed
 
   
     public static void main(String args[]) {
@@ -107,5 +116,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jogar;
     private javax.swing.JButton sair;
+    private javax.swing.JButton teste_conect;
     // End of variables declaration//GEN-END:variables
 }

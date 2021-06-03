@@ -35,8 +35,8 @@ public class splash extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null, "Erro ao carregar");
                     }
                 }
-               Menu Mn = new Menu();
-               Mn.setVisible(true);
+               Menu Menu = new Menu();
+               Menu.setVisible(true);
                dispose();
             }
         
@@ -54,9 +54,7 @@ public class splash extends javax.swing.JFrame {
         Splash_BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 630));
         setMinimumSize(new java.awt.Dimension(800, 630));
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -66,7 +64,10 @@ public class splash extends javax.swing.JFrame {
         getContentPane().add(status);
         status.setBounds(120, 570, 470, 20);
 
-        ProgressBar.setForeground(new java.awt.Color(0, 51, 255));
+        ProgressBar.setBackground(new java.awt.Color(0, 0, 0));
+        ProgressBar.setForeground(new java.awt.Color(255, 255, 255));
+        ProgressBar.setToolTipText("");
+        ProgressBar.setBorderPainted(false);
         ProgressBar.setStringPainted(true);
         getContentPane().add(ProgressBar);
         ProgressBar.setBounds(120, 540, 520, 30);
