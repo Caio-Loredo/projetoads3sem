@@ -57,6 +57,7 @@ public class tela_cadastro extends javax.swing.JFrame {
         getContentPane().add(rgm);
         rgm.setBounds(190, 140, 40, 15);
 
+        jText_cadastro_rgm.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jText_cadastro_rgm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jText_cadastro_rgmActionPerformed(evt);
@@ -136,6 +137,7 @@ public class tela_cadastro extends javax.swing.JFrame {
         String cadastro_curso = this.jText_cadastro_curso.getText();
         int cadastro_semestre = Integer.parseInt(this.jText_cadastro_semestre.getText());
         controle.InsereDados(cadastro_rgm,cadastro_nome,cadastro_curso,cadastro_semestre);
+        
         
     }//GEN-LAST:event_jButtron_cadastrarActionPerformed
 

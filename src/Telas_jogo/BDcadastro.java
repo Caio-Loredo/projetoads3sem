@@ -11,7 +11,7 @@ public class BDcadastro {
     cadastro_jogador jogador = new cadastro_jogador();
     java.sql.ResultSet rs;
     private Connection conexao = null;
-    private Statement st = null;
+    private Statement comando = null;
 
         public void Conecta(){    
             try {
@@ -23,7 +23,7 @@ public class BDcadastro {
                 Class.forName(driverName);           
                 String url = "jdbc:mysql://" + serverName + "/" + mydatabase+"?useTimezone=true&serverTimezone=UTC";
                 conexao = DriverManager.getConnection(url,username,password);
-                st = conexao.createStatement();
+                comando = conexao.createStatement();
                 JOptionPane.showMessageDialog(null,"Conexão OK");
             }
             catch (ClassNotFoundException e){
@@ -48,7 +48,7 @@ public class BDcadastro {
         }
         
         public void Insert(){ 
-        if ((jogador.getNome().length() >=1)&&(jogador.getRgm()!=0)&&(jogador.getCurso().length()>0)&&(jogador.getSemestre()!=0)){
+        if ((jogador.getRgm()!=0)&&(jogador.getNome().length() >1)&&(jogador.getCurso().length()>1)&&(jogador.getSemestre()!=0)){
             try {
                 PreparedStatement PreparedStatement;
                 String sql = "INSERT INTO cadastro(rgm,nome,curso,semestre) VALUES(?,?,?,?)"; 
@@ -82,7 +82,7 @@ public class BDcadastro {
             pst.setInt(1, jogador.getRgm());
             rs = pst.executeQuery();
             if(rs.next()){
-                
+                JOptionPane.showMessageDialog(null, "Bem Vindo!");
             } else{
                 JOptionPane.showMessageDialog(null, "Usuário e ou senha inválidos!");
             }
