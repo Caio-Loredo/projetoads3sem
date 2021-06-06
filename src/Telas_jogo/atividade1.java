@@ -9,28 +9,100 @@ import javax.swing.JOptionPane;
 
 public class atividade1 extends javax.swing.JFrame {
 
-    
+  
 
     
+    
     public atividade1() {
+        
+       
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());        
+         /*if(this.jTextField1.equals("REAL")){           
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png"))); 
+                                 
+        }
         
+        else{
+               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+               vida = vida -1;
+        }
+       
+        if(this.jTextField2.equals("LEIA(nota2)")){
+                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
+            }
+         else{
+               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+               vida = vida -1;
+         }
+        if(this.jTextField3.equals("media")){
+                    this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
+            }
+         else{
+               this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+               vida = vida -1;
+         }
+        if(vida == 2){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao1.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao1.png")));
+        }
+         if(vida == 1){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao1.png")));
+        }
+          if(vida <= 0){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
+            JOptionPane.showMessageDialog(null,"Perdeu todas as chances, tente novamente!!");
+            atividade1 Mn = new atividade1();
+                           Mn.setVisible(true);
+                           dispose();
+        }*/
+        new Thread(){
+        @Override
+            public void run(){
+                for (int i=0 ; i<=60 ; i++){
+                    try{
+                        sleep(1000);
+                        timebar.setValue(i);
+                        
+                        if(timebar.getValue()==60){
+                           JOptionPane.showMessageDialog(null,"Tempo esgotado!!!");
+                           atividade1 Mn = new atividade1();
+                           Mn.setVisible(true);
+                           dispose();
+                        } 
+                        
+                    } catch (InterruptedException ex) {
+                        JOptionPane.showMessageDialog(null, "Erro ao carregar");
+                    }
+                }
+            }
         
-        
+        }.start();
     }
+    
 
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField3 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         status3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         status2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         status1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        jTextField3 = new javax.swing.JTextField();
+        timebar = new javax.swing.JProgressBar();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -44,26 +116,52 @@ public class atividade1 extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(690, 20, 80, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(600, 20, 80, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(520, 20, 80, 40);
+        getContentPane().add(status3);
+        status3.setBounds(470, 440, 50, 20);
+        getContentPane().add(status2);
+        status2.setBounds(340, 400, 50, 20);
+        getContentPane().add(status1);
+        status1.setBounds(430, 310, 50, 40);
+
+        jTextPane3.setEditable(false);
+        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
+        jTextPane3.setText("Tempo");
+        jScrollPane3.setViewportView(jTextPane3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(170, 20, 100, 40);
+
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField3);
         jTextField3.setBounds(420, 440, 40, 20);
-        getContentPane().add(status3);
-        status3.setBounds(470, 440, 50, 20);
+
+        timebar.setString("0");
+        getContentPane().add(timebar);
+        timebar.setBounds(270, 25, 210, 20);
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField2);
         jTextField2.setBounds(260, 400, 70, 20);
-        getContentPane().add(status2);
-        status2.setBounds(340, 400, 50, 20);
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField1);
         jTextField1.setBounds(270, 310, 150, 20);
-        getContentPane().add(status1);
-        status1.setBounds(430, 310, 50, 40);
 
         jButton4.setBackground(new java.awt.Color(102, 255, 255));
         jButton4.setToolTipText("Clique para ir para a próxima tela");
@@ -99,7 +197,7 @@ public class atividade1 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(180, 100, 540, 380);
+        jScrollPane2.setBounds(180, 100, 540, 440);
 
         jButton2.setText("Verificar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +206,7 @@ public class atividade1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(360, 500, 80, 50);
+        jButton2.setBounds(80, 500, 80, 50);
 
         Splash_BG.setBackground(new java.awt.Color(0, 204, 255));
         Splash_BG.setForeground(new java.awt.Color(0, 204, 255));
@@ -126,26 +224,39 @@ public class atividade1 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         if(this.jTextField1.equals("REAL")){           
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png"))); 
-                                  
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));   
+             if(this.jTextField2.equals("LEIA(nota2)")){
+                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
+                        if(this.jTextField3.equals("media")){
+                        this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
+                        this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("img/btnProximo.png")));
+            JOptionPane.showMessageDialog(null,"Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns" );
+                }
+            }
+             
         }
         
         else{
                this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+                this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png")));
+                
+                 JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
+               atividade1 var = new atividade1();
                
+          var.setVisible(true);
+          dispose();
         }
        
-        if(this.jTextField2.equals("LEIA(nota2)")){
-                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+       
+       /* else {
+               
+              
          }
-        if(this.jTextField3.equals("media")){
-                    this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
+     
          else{
                this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
+              
          }
         if(this.jTextField1.equals("REAL") && this.jTextField2.equals("LEIA(nota2)") && this.jTextField3.equals("media")){
         
@@ -157,18 +268,17 @@ public class atividade1 extends javax.swing.JFrame {
                              
                JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
                atividade1 var = new atividade1();
+               
           var.setVisible(true);
           dispose();
-         }
+         }*/
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        jButton4.setOpaque(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.setBorderPainted(false);
+       
         atividade2 next = new atividade2();
         next.setVisible(true);
         dispose();
@@ -188,15 +298,21 @@ public class atividade1 extends javax.swing.JFrame {
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
     private javax.swing.JLabel status1;
     private javax.swing.JLabel status2;
     private javax.swing.JLabel status3;
+    private javax.swing.JProgressBar timebar;
     // End of variables declaration//GEN-END:variables
 }
