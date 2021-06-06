@@ -24,7 +24,7 @@ public class BDcadastro {
                 String url = "jdbc:mysql://" + serverName + "/" + mydatabase+"?useTimezone=true&serverTimezone=UTC";
                 conexao = DriverManager.getConnection(url,username,password);
                 comando = conexao.createStatement();
-                JOptionPane.showMessageDialog(null,"Conexão OK");
+                System.out.println("Conexão com o banco de dados efetuada com sucesso!");
             }
             catch (ClassNotFoundException e){
                         System.out.println("Driver não encontrado!");
@@ -51,13 +51,13 @@ public class BDcadastro {
         if ((jogador.getRgm()!=0)&&(jogador.getNome().length() >1)&&(jogador.getCurso().length()>1)&&(jogador.getSemestre()!=0)){
             try {
                 PreparedStatement PreparedStatement;
-                String sql = "INSERT INTO cadastro(rgm,nome,curso,semestre) VALUES(?,?,?,?)"; 
+                String sql = "INSERT INTO cadastro(rgm,nome,curso,semestre)"+ "VALUES(?,?,?,?)"; 
                 PreparedStatement = conexao.prepareStatement(sql);
                 PreparedStatement.setInt(1,jogador.getRgm()); 
                 PreparedStatement.setString(2,jogador.getNome());
                 PreparedStatement.setString(3,jogador.getCurso());       
                 PreparedStatement.setInt(4,jogador.getSemestre());
-                int intRegistro = PreparedStatement.executeUpdate(sql); 
+                int intRegistro = PreparedStatement.executeUpdate(); 
                 if (intRegistro !=0){ 
                     JOptionPane.showMessageDialog(null,"Registro adicionado com sucesso !", "Menagem ao Usuario",JOptionPane.INFORMATION_MESSAGE); 
                  } 
@@ -82,7 +82,10 @@ public class BDcadastro {
             pst.setInt(1, jogador.getRgm());
             rs = pst.executeQuery();
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "Bem Vindo!");
+                
+                intro intro = new intro();
+                intro.setVisible(true);
+                dispose();
             } else{
                 JOptionPane.showMessageDialog(null, "Usuário e ou senha inválidos!");
             }
@@ -90,6 +93,11 @@ public class BDcadastro {
             JOptionPane.showMessageDialog(null, e);
         }       
 
+    }
+
+    private void dispose() {
+        JOptionPane.showMessageDialog(null, "Bem Vindo!");
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
        
 }

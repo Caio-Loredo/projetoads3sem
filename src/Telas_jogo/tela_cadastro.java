@@ -100,7 +100,7 @@ public class tela_cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtron_cadastrar);
-        jButtron_cadastrar.setBounds(530, 310, 180, 50);
+        jButtron_cadastrar.setBounds(340, 400, 180, 50);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 240, 240));

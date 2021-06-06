@@ -18,9 +18,7 @@ BDcadastro controle = new BDcadastro();
     private void initComponents() {
 
         jogar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         sair = new javax.swing.JButton();
-        teste_conect = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -29,6 +27,7 @@ BDcadastro controle = new BDcadastro();
         setResizable(false);
         getContentPane().setLayout(null);
 
+        jogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/jogar.png"))); // NOI18N
         jogar.setText("Jogar");
         jogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -36,21 +35,9 @@ BDcadastro controle = new BDcadastro();
             }
         });
         getContentPane().add(jogar);
-        jogar.setBounds(260, 250, 130, 50);
+        jogar.setBounds(410, 200, 170, 50);
 
-        jButton1.setText("Ranking de Pontuação");
-        jButton1.setMaximumSize(new java.awt.Dimension(59, 23));
-        jButton1.setMinimumSize(new java.awt.Dimension(59, 23));
-        jButton1.setPreferredSize(new java.awt.Dimension(59, 23));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(250, 310, 150, 50);
-        jButton1.getAccessibleContext().setAccessibleName("cadastrar");
-
+        sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnsair.png"))); // NOI18N
         sair.setText("Sair");
         sair.setToolTipText("");
         sair.addActionListener(new java.awt.event.ActionListener() {
@@ -59,16 +46,7 @@ BDcadastro controle = new BDcadastro();
             }
         });
         getContentPane().add(sair);
-        sair.setBounds(260, 370, 130, 50);
-
-        teste_conect.setText("Testar Conexao");
-        teste_conect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                teste_conectActionPerformed(evt);
-            }
-        });
-        getContentPane().add(teste_conect);
-        teste_conect.setBounds(423, 210, 120, 23);
+        sair.setBounds(250, 240, 140, 70);
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG_Game.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
@@ -87,19 +65,11 @@ BDcadastro controle = new BDcadastro();
         dispose();
     }//GEN-LAST:event_jogarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
         // TODO add your handling code here:
         System.exit(0);
         
     }//GEN-LAST:event_sairActionPerformed
-
-    private void teste_conectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teste_conectActionPerformed
-        controle.Conecta();
-    }//GEN-LAST:event_teste_conectActionPerformed
 
   
     public static void main(String args[]) {
@@ -113,9 +83,7 @@ BDcadastro controle = new BDcadastro();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Splash_BG;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jogar;
     private javax.swing.JButton sair;
-    private javax.swing.JButton teste_conect;
     // End of variables declaration//GEN-END:variables
 }

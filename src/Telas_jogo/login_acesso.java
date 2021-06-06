@@ -10,6 +10,7 @@ public class login_acesso extends javax.swing.JFrame {
     
     public login_acesso() {
         initComponents();
+        controle.Conecta();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());      
     }
 
@@ -26,7 +27,6 @@ public class login_acesso extends javax.swing.JFrame {
         cadastro = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,6 +62,7 @@ public class login_acesso extends javax.swing.JFrame {
         getContentPane().add(jText_login_rgm);
         jText_login_rgm.setBounds(190, 260, 280, 20);
 
+        Entrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnentrar.png"))); // NOI18N
         Entrar.setText("Entrar");
         Entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,15 +97,6 @@ public class login_acesso extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(190, 330, 400, 20);
 
-        jButton1.setText("Entrar(teste)");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(530, 410, 160, 23);
-
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setMinimumSize(new java.awt.Dimension(800, 630));
@@ -130,17 +122,11 @@ public class login_acesso extends javax.swing.JFrame {
     }//GEN-LAST:event_jText_login_rgmActionPerformed
 
     private void cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroActionPerformed
-        // TODO add your handling code here:
+
         tela_cadastro tela_cadastro = new tela_cadastro();
         tela_cadastro.setVisible(true);
         dispose();
     }//GEN-LAST:event_cadastroActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        intro intro = new intro();
-        intro.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
   
     public static void main(String args[]) {
@@ -157,7 +143,6 @@ public class login_acesso extends javax.swing.JFrame {
     private javax.swing.JLabel RGM;
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton cadastro;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jText_login_nome;
