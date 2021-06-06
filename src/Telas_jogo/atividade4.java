@@ -74,7 +74,7 @@ public class atividade4 extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(690, 10, 80, 40);
+        jLabel3.setBounds(680, 10, 80, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
         getContentPane().add(jLabel2);

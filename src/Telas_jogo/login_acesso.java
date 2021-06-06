@@ -111,6 +111,7 @@ public class login_acesso extends javax.swing.JFrame {
     private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         int login_rgm = Integer.parseInt(this.jText_login_rgm.getText());      
         controle.InsereLogin(login_rgm);
+        dispose();
     }//GEN-LAST:event_EntrarActionPerformed
 
     private void jText_login_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_login_nomeActionPerformed

@@ -106,7 +106,7 @@ public class atividade1 extends javax.swing.JFrame {
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(420, 440, 40, 20);
+        jTextField3.setBounds(450, 460, 40, 20);
 
         timebar.setString("0");
         getContentPane().add(timebar);
@@ -115,12 +115,12 @@ public class atividade1 extends javax.swing.JFrame {
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(260, 400, 70, 20);
+        jTextField2.setBounds(270, 420, 60, 20);
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(270, 310, 150, 20);
+        jTextField1.setBounds(280, 320, 150, 20);
 
         jButton4.setBackground(new java.awt.Color(102, 255, 255));
         jButton4.setToolTipText("Clique para ir para a próxima tela");
@@ -156,7 +156,7 @@ public class atividade1 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(180, 100, 540, 390);
+        jScrollPane2.setBounds(190, 110, 540, 390);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
