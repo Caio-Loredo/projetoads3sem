@@ -75,7 +75,7 @@ public class atividade3 extends javax.swing.JFrame {
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(170, 250, 130, 20);
+        jTextField2.setBounds(170, 245, 130, 20);
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField3);
@@ -89,9 +89,9 @@ public class atividade3 extends javax.swing.JFrame {
         getContentPane().add(status3);
         status3.setBounds(210, 310, 50, 30);
         getContentPane().add(status2);
-        status2.setBounds(380, 210, 50, 30);
+        status2.setBounds(310, 250, 50, 30);
         getContentPane().add(status1);
-        status1.setBounds(200, 250, 50, 30);
+        status1.setBounds(380, 200, 50, 30);
 
         jButton4.setBackground(new java.awt.Color(102, 255, 255));
         jButton4.setToolTipText("Clique para ir para a próxima tela");

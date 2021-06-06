@@ -24,8 +24,8 @@ public class atividade4 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         status4 = new javax.swing.JLabel();
@@ -45,43 +45,33 @@ public class atividade4 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 630));
         setResizable(false);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(680, 10, 80, 40);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(600, 10, 80, 40);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(520, 10, 80, 40);
-
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(200, 250, 59, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(320, 180, 70, 20);
+        jTextField2.setAutoscrolls(false);
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 70, -1));
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 59, -1));
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(200, 407, 70, 20);
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 407, 70, -1));
 
         jTextField4.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(240, 470, 80, 20);
-        getContentPane().add(status4);
-        status4.setBounds(320, 460, 40, 30);
-        getContentPane().add(status3);
-        status3.setBounds(270, 397, 50, 30);
-        getContentPane().add(status2);
-        status2.setBounds(390, 170, 40, 30);
-        getContentPane().add(status1);
-        status1.setBounds(260, 240, 50, 30);
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 80, -1));
+        getContentPane().add(status4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 40, 30));
+        getContentPane().add(status3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 397, 50, 30));
+        getContentPane().add(status2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 40, 30));
+        getContentPane().add(status1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 50, 30));
 
         jTextPane3.setEditable(false);
         jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
@@ -91,8 +81,7 @@ public class atividade4 extends javax.swing.JFrame {
         jTextPane3.setText("Vidas:");
         jScrollPane3.setViewportView(jTextPane3);
 
-        getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(460, 10, 70, 31);
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 70, 31));
 
         jTextPane1.setBackground(new java.awt.Color(0, 98, 130));
         jTextPane1.setBorder(null);
@@ -101,16 +90,14 @@ public class atividade4 extends javax.swing.JFrame {
         jTextPane1.setText("Fase 4");
         jScrollPane1.setViewportView(jTextPane1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(80, 10, 80, 30);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 80, 30));
 
         jTextPane2.setEditable(false);
         jTextPane2.setContentType(""); // NOI18N
         jTextPane2.setText("Parabens por mais um código concluido, agora teremos um novo desafio por favor veja o código abaixo e complete com os comandos certos para o código funcionar !\n\n\nAlgoritmo \"Chamada de login\"\n\nfuncao fazer_Login() : REAL\nvar\n    senha, logar : REAL\ninicio\n      SE (senha := \"12345\") ENTAO \n\t ESCREVA (\"Acesso liberado!\")\n      SENAO\n\t ESCREVA (\"Acesso negado!\")\n      FIMSE\n\n      RETORNE logar\nfimfuncao\n\nvar\n   login : CARACTERE\n   senha, logar : REAL\ninicio\n      ESCREVA (\"Digite o seu login: \")\n      LEIA (login)\n      ESCREVA (\"Digite a sua senha: \")\n      LEIA (senha)\n\n      logar := fazer_Login()\n      ESCREVA (\"Seja bem-vindo, usuario: \",login )\nfimalgoritmo");
         jScrollPane2.setViewportView(jTextPane2);
 
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(180, 90, 560, 430);
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 560, 430));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
@@ -119,8 +106,7 @@ public class atividade4 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(330, 520, 170, 30);
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 170, 30));
 
         jButton4.setBackground(new java.awt.Color(102, 255, 255));
         jButton4.setToolTipText("Clique para ir para a próxima tela");
@@ -134,15 +120,13 @@ public class atividade4 extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(680, 510, 50, 40);
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, 50, 40));
 
         Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/GB-fundo.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setMinimumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setPreferredSize(new java.awt.Dimension(800, 630));
-        getContentPane().add(Splash_BG);
-        Splash_BG.setBounds(0, 0, 800, 600);
+        getContentPane().add(Splash_BG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 600));
 
         pack();
         setLocationRelativeTo(null);
