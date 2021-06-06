@@ -27,7 +27,7 @@ public class BDcadastro {
                 System.out.println("Conexão com o banco de dados efetuada com sucesso!");
             }
             catch (ClassNotFoundException e){
-                        System.out.println("Driver não encontrado!");
+                        System.out.println("Driver não encontrado!"+e);
             }
             catch (Exception e){
                    System.out.println(" SQL Exception "+ e.getMessage()+" Erro ao conectar o Banco de Dados");

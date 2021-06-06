@@ -10,6 +10,7 @@ public class tela_cadastro extends javax.swing.JFrame {
     
     public tela_cadastro() {
         initComponents();
+        controle.Conecta();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());  
     }
 

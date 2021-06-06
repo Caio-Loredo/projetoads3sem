@@ -43,6 +43,8 @@ public class explica1 extends javax.swing.JFrame {
         jScrollPane1.setBounds(180, 110, 540, 260);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnAnterior.png"))); // NOI18N
+        jButton2.setContentAreaFilled(false);
+        jButton2.setDefaultCapable(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -52,6 +54,7 @@ public class explica1 extends javax.swing.JFrame {
         jButton2.setBounds(570, 410, 60, 80);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnProximo.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
