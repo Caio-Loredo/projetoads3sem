@@ -8,13 +8,36 @@ import javax.swing.JOptionPane;
 
 
 public class atividade3 extends javax.swing.JFrame {
-
+    
+    int vida = 3;
     
     public atividade3() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
         
+         new Thread(){
+        @Override
+            public void run(){
+                for (int i=0 ; i<=100 ; i++){
+                    try{
+                        sleep(1000);
+                        timebar.setValue(i);
+                        
+                        if(timebar.getValue()==100){
+                           JOptionPane.showMessageDialog(null,"Tempo esgotado!!!");
+                           atividade1 Mn = new atividade1();
+                           Mn.setVisible(true);
+                           dispose();
+                           i = 0;
+                        }
+                        
+                    } catch (InterruptedException ex) {
+                        JOptionPane.showMessageDialog(null, "Erro ao carregar");
+                    }
+                }
+            }
         
+        }.start();
         
     }
 
@@ -23,6 +46,12 @@ public class atividade3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        timebar = new javax.swing.JProgressBar();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jTextField1 = new javax.swing.JTextField();
@@ -43,6 +72,32 @@ public class atividade3 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 630));
         setResizable(false);
         getContentPane().setLayout(null);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(690, 10, 80, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(600, 10, 80, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(520, 10, 80, 40);
+
+        jTextPane3.setEditable(false);
+        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
+        jTextPane3.setText("Tempo");
+        jScrollPane3.setViewportView(jTextPane3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(170, 10, 100, 40);
+
+        timebar.setString("0");
+        getContentPane().add(timebar);
+        timebar.setBounds(270, 20, 210, 20);
 
         jTextPane1.setBackground(new java.awt.Color(0, 98, 130));
         jTextPane1.setBorder(null);
@@ -101,6 +156,7 @@ public class atividade3 extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(180, 75, 540, 430);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,9 +164,9 @@ public class atividade3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(360, 513, 71, 40);
+        jButton2.setBounds(340, 520, 170, 40);
 
-        Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
+        Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/GB-fundo.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setMinimumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setPreferredSize(new java.awt.Dimension(800, 630));
@@ -162,10 +218,26 @@ public class atividade3 extends javax.swing.JFrame {
         }
         else{
             JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
-            atividade3 var = new atividade3();
-            var.setVisible(true);
-            dispose();
+            }
+        if(vida == 2){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao1.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao1.png")));
         }
+         if(vida == 1){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao1.png")));
+        }
+          if(vida <= 0){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            JOptionPane.showMessageDialog(null,"Perdeu todas as chances, tente novamente!!");
+            atividade3 Mn = new atividade3();
+            Mn.setVisible(true);
+            dispose();
+          }
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -194,17 +266,23 @@ public class atividade3 extends javax.swing.JFrame {
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
     private javax.swing.JLabel status1;
     private javax.swing.JLabel status2;
     private javax.swing.JLabel status3;
     private javax.swing.JLabel status4;
+    private javax.swing.JProgressBar timebar;
     // End of variables declaration//GEN-END:variables
 }

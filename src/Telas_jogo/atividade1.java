@@ -23,16 +23,17 @@ public class atividade1 extends javax.swing.JFrame {
         new Thread(){
         @Override
             public void run(){
-                for (int i=0 ; i<=60 ; i++){
+                for (int i=0 ; i<=100 ; i++){
                     try{
                         sleep(1000);
                         timebar.setValue(i);
                         
-                        if(timebar.getValue()==60){
+                        if(timebar.getValue()==100){
                            JOptionPane.showMessageDialog(null,"Tempo esgotado!!!");
                            atividade1 Mn = new atividade1();
                            Mn.setVisible(true);
                            dispose();
+                           i = 0;
                         }
                         
                     } catch (InterruptedException ex) {
@@ -76,15 +77,15 @@ public class atividade1 extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(690, 20, 80, 40);
+        jLabel3.setBounds(680, 10, 80, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(600, 20, 80, 40);
+        jLabel2.setBounds(600, 10, 80, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coracao1.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(520, 20, 80, 40);
+        jLabel1.setBounds(520, 10, 80, 40);
         getContentPane().add(status3);
         status3.setBounds(470, 440, 50, 20);
         getContentPane().add(status2);
@@ -100,7 +101,7 @@ public class atividade1 extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextPane3);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(170, 20, 100, 40);
+        jScrollPane3.setBounds(170, 10, 100, 40);
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -109,7 +110,7 @@ public class atividade1 extends javax.swing.JFrame {
 
         timebar.setString("0");
         getContentPane().add(timebar);
-        timebar.setBounds(270, 25, 210, 20);
+        timebar.setBounds(270, 20, 210, 20);
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -155,8 +156,9 @@ public class atividade1 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(180, 100, 540, 440);
+        jScrollPane2.setBounds(180, 100, 540, 390);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,11 +166,11 @@ public class atividade1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(80, 500, 80, 50);
+        jButton2.setBounds(360, 520, 170, 40);
 
         Splash_BG.setBackground(new java.awt.Color(0, 204, 255));
         Splash_BG.setForeground(new java.awt.Color(0, 204, 255));
-        Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BG 800.png"))); // NOI18N
+        Splash_BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/GB-fundo.png"))); // NOI18N
         Splash_BG.setMaximumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setMinimumSize(new java.awt.Dimension(800, 630));
         Splash_BG.setPreferredSize(new java.awt.Dimension(800, 630));
@@ -242,7 +244,7 @@ public class atividade1 extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
        
-        timebar.setValue(0);
+       
         atividade2 next = new atividade2();
         next.setVisible(true);
         dispose();

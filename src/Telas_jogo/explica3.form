@@ -48,7 +48,7 @@
               <Font name="Segoe UI" size="13" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="PAR&#xc2;METROS&#xa;Fun&#xe7;&#xf5;es (e procedimentos) podem ou n&#xe3;o receber par&#xe2;metros. No caso da fun&#xe7;&#xe3;o de raiz&#xa;quadrada, &#xe9; necess&#xe1;rio passar como par&#xe2;metro o n&#xfa;mero que se deseja calcular a raiz,&#xa;o procedimento ESCREVA, requer um texto como par&#xe2;metro para apresentar na tela do&#xa;usu&#xe1;rio."/>
+            <Property name="text" type="java.lang.String" value="USANDO FUN&#xc7;&#xd5;ES NA PR&#xc1;TICA!&#xa;&#xa;algoritmo &quot;Hipotenusa&quot;&#xa;var&#xa;    a, b, c : REAL&#xa;inicio&#xa;      ESCREVA (&quot;Digite o lado A do tri&#xe2;ngulo ret&#xe2;ngulo: &quot;)&#xa;      LEIA (a)&#xa;      ESCREVA (&quot;Digite o lado B do tri&#xe2;ngulo ret&#xe2;ngulo: &quot;)&#xa;      LEIA (b)&#xa;      c := RAIZQ ( a*a + b*b )//C&#xe1;lculo da hipotenusa utilizando a FUN&#xc7;&#xc3;O RAIZQ,&#xa;      ESCREVA (&quot;O valor da hipotenusa &#xe9;: &quot;, c)&#xa;fimalgoritmo"/>
           </Properties>
         </Component>
       </SubComponents>

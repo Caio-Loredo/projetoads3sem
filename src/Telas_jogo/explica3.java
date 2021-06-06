@@ -36,7 +36,7 @@ public class explica3 extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("PARÂMETROS\nFunções (e procedimentos) podem ou não receber parâmetros. No caso da função de raiz\nquadrada, é necessário passar como parâmetro o número que se deseja calcular a raiz,\no procedimento ESCREVA, requer um texto como parâmetro para apresentar na tela do\nusuário.");
+        jTextArea1.setText("USANDO FUNÇÕES NA PRÁTICA!\n\nalgoritmo \"Hipotenusa\"\nvar\n    a, b, c : REAL\ninicio\n      ESCREVA (\"Digite o lado A do triângulo retângulo: \")\n      LEIA (a)\n      ESCREVA (\"Digite o lado B do triângulo retângulo: \")\n      LEIA (b)\n      c := RAIZQ ( a*a + b*b )//Cálculo da hipotenusa utilizando a FUNÇÃO RAIZQ,\n      ESCREVA (\"O valor da hipotenusa é: \", c)\nfimalgoritmo");
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
@@ -73,19 +73,19 @@ public class explica3 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        explica4 var = new explica4();
-          var.setVisible(true);
-          dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         explica2 var = new explica2();
           var.setVisible(true);
           dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        atividade1 var = new atividade1();
+          var.setVisible(true);
+          dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
   
     public static void main(String args[]) {
