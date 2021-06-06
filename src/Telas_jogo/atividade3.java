@@ -71,11 +71,11 @@ public class atividade3 extends javax.swing.JFrame {
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(170, 260, 30, 20);
+        jTextField1.setBounds(250, 220, 30, 20);
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(250, 220, 130, 20);
+        jTextField2.setBounds(170, 250, 130, 20);
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField3);

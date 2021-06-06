@@ -18,7 +18,7 @@ public class BDcadastro {
                 String serverName = "localhost";
                 String mydatabase = "BDjogo";
                 String username = "root";
-                String password = "123Mudar";          
+                String password = "Caio4142130";          
                 String driverName = "com.mysql.cj.jdbc.Driver";
                 Class.forName(driverName);           
                 String url = "jdbc:mysql://" + serverName + "/" + mydatabase+"?useTimezone=true&serverTimezone=UTC";
