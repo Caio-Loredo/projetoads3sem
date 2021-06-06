@@ -133,50 +133,53 @@ public class atividade4 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if(this.jTextField1.equals("ENTAO")){           
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png"))); 
-                                  
-        }
+         String text1 = jTextField1.getText();
+        String text2 = jTextField2.getText();
+        String text3 = jTextField3.getText();
+        String text4 = jTextField4.getText();
         
+        if(text1.equals("ENTAO")){
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png"))); 
+        }        
         else{
-               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-               
+               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
         }
-       
-        if(this.jTextField2.equals("FIMSE")){
-                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-         }
-        if(this.jTextField3.equals("LEIA (login)")){
-                    this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-         }
-         if(this.jTextField4.equals("fimalgoritmo")){
-                    this.status4.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status4.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-         }
-        if(this.jTextField1.equals("ENTAO") && this.jTextField2.equals("FIMSE") && this.jTextField3.equals("LEIA (login)") && this.jTextField4.equals("fimalgoritmo")){
         
-            this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("img/btnProximo.png")));
-            JOptionPane.showMessageDialog(null,"Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns" );
-            
+        if(text2.equals("FIMSE")){
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
-         else{
-                             
-               JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
-               atividade2 var = new atividade2();
-          var.setVisible(true);
-          dispose();
-         }
+        else{
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
+        }
+        
+        if(text3.equals("LEIA (login)")){
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
+        }
+        else{
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png"))); 
+        }
+        
+        if(text4.equals("fimalgoritmo")){
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png"))); 
+        }        
+        else{
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
+        }
+        
+        if(text1.equals("ENTAO") && text2.equals("FIMSE") && text3.equals("LEIA (login)") && text4.equals("fimalgoritmo")){
+            this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("/img/btnProximo.png")));
+            JOptionPane.showMessageDialog(null, "Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns");    
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
+            atividade4 var = new atividade4();
+            var.setVisible(true);
+            dispose();
+        }     
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
-
+  
   
     public static void main(String args[]) {
         

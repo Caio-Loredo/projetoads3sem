@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 public class atividade1 extends javax.swing.JFrame {
 
-  
+  int vida = 3;
 
     
     
@@ -74,7 +74,7 @@ public class atividade1 extends javax.swing.JFrame {
                            atividade1 Mn = new atividade1();
                            Mn.setVisible(true);
                            dispose();
-                        } 
+                        }
                         
                     } catch (InterruptedException ex) {
                         JOptionPane.showMessageDialog(null, "Erro ao carregar");
@@ -223,31 +223,61 @@ public class atividade1 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if(this.jTextField1.equals("REAL")){           
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));   
-             if(this.jTextField2.equals("LEIA(nota2)")){
-                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-                        if(this.jTextField3.equals("media")){
-                        this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-                        this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("img/btnProximo.png")));
-            JOptionPane.showMessageDialog(null,"Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns" );
-                }
-            }
-             
+        String text1 = jTextField1.getText();
+        String text2 = jTextField2.getText();
+        String text3 = jTextField3.getText();
+        
+        if(text1.equals("REAL")){
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png"))); 
+        }        
+        else{
+               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+               vida = vida -1;
         }
         
-        else{
-               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-                this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png")));
-                
-                 JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
-               atividade1 var = new atividade1();
-               
-          var.setVisible(true);
-          dispose();
+        if(text2.equals("LEIA (nota2)")){
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
-       
+        else{
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
+        }
+        
+        if(text3.equals("media")){
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
+        }
+        else{
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
+        }
+        
+        if(text1.equals("REAL") && text2.equals("LEIA (nota2)") && text3.equals("media")){
+            this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("/img/btnProximo.png")));
+            JOptionPane.showMessageDialog(null, "Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns");    
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
+        }
+        
+        if(vida == 2){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao1.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao1.png")));
+        }
+         if(vida == 1){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao1.png")));
+        }
+          if(vida <= 0){
+            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/coracao2.png")));
+            JOptionPane.showMessageDialog(null,"Perdeu todas as chances, tente novamente!!");
+            atividade1 Mn = new atividade1();
+            Mn.setVisible(true);
+            dispose();
+          }
        
        /* else {
                
@@ -279,6 +309,7 @@ public class atividade1 extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
        
+        timebar.setValue(0);
         atividade2 next = new atividade2();
         next.setVisible(true);
         dispose();

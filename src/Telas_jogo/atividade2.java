@@ -11,6 +11,8 @@ public class atividade2 extends javax.swing.JFrame {
 
     
     public atividade2() {
+        
+        
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
         
@@ -27,7 +29,10 @@ public class atividade2 extends javax.swing.JFrame {
         jTextPane1 = new javax.swing.JTextPane();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        timebar = new javax.swing.JProgressBar();
         status3 = new javax.swing.JLabel();
         status2 = new javax.swing.JLabel();
         status1 = new javax.swing.JLabel();
@@ -60,9 +65,23 @@ public class atividade2 extends javax.swing.JFrame {
         getContentPane().add(jTextField2);
         jTextField2.setBounds(240, 340, 60, 20);
 
-        jTextField4.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(293, 425, 90, 20);
+        jTextField3.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(293, 425, 90, 20);
+
+        jTextPane3.setEditable(false);
+        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
+        jTextPane3.setText("Tempo");
+        jScrollPane3.setViewportView(jTextPane3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(170, 20, 100, 40);
+
+        timebar.setString("0");
+        getContentPane().add(timebar);
+        timebar.setBounds(270, 25, 210, 20);
         getContentPane().add(status3);
         status3.setBounds(400, 425, 50, 20);
         getContentPane().add(status2);
@@ -115,41 +134,41 @@ public class atividade2 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if(this.jTextField1.equals("RETORNE IMC")){           
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png"))); 
-                                  
-        }
+        String text1 = jTextField1.getText();
+        String text2 = jTextField2.getText();
+        String text3 = jTextField3.getText();
         
+        if(text1.equals("RETORNE IMC")){           
+            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));                           
+        }
         else{
-               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-               
+               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
         }
        
-        if(this.jTextField2.equals("LEIA(nota2)")){
-                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-         }
-        if(this.jTextField4.equals("calcular_IMC()")){
-                    this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-         }
-        if(this.jTextField1.equals("RETORNE IMC") && this.jTextField2.equals("ESCREVA") && this.jTextField4.equals("calcular_IMC()")){
-        
-            this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("img/btnProximo.png")));
-            JOptionPane.showMessageDialog(null,"Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns" );
-            
+        if(text2.equals("ESCREVA")){
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
-         else{
-                             
-               JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
-               atividade2 var = new atividade2();
-          var.setVisible(true);
-          dispose();
+        else{
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png"))); 
+        }
+        
+        if(text3.equals("calcular_IMC()")){
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
+        }
+        else{
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png"))); 
          }
+        
+        if(text1.equals("RETORNE IMC") && text2.equals("ESCREVA") && text3.equals("calcular_IMC()")){
+            this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("/img/btnProximo.png")));
+            JOptionPane.showMessageDialog(null, "Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns");    
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
+            atividade2 var = new atividade2();
+            var.setVisible(true);
+            dispose();
+        }
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -180,13 +199,16 @@ public class atividade2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
     private javax.swing.JLabel status1;
     private javax.swing.JLabel status2;
     private javax.swing.JLabel status3;
+    private javax.swing.JProgressBar timebar;
     // End of variables declaration//GEN-END:variables
 }
