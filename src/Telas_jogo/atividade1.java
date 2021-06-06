@@ -18,49 +18,8 @@ public class atividade1 extends javax.swing.JFrame {
        
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());        
-         /*if(this.jTextField1.equals("REAL")){           
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png"))); 
-                                 
-        }
+
         
-        else{
-               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-               vida = vida -1;
-        }
-       
-        if(this.jTextField2.equals("LEIA(nota2)")){
-                    this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-               vida = vida -1;
-         }
-        if(this.jTextField3.equals("media")){
-                    this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_acerto.png")));
-            }
-         else{
-               this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-               vida = vida -1;
-         }
-        if(vida == 2){
-            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
-            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao1.png")));
-            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao1.png")));
-        }
-         if(vida == 1){
-            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
-            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
-            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao1.png")));
-        }
-          if(vida <= 0){
-            this.jLabel1.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
-            this.jLabel2.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
-            this.jLabel3.setIcon((Icon)new ImageIcon(getClass().getResource("img/coracao2.png")));
-            JOptionPane.showMessageDialog(null,"Perdeu todas as chances, tente novamente!!");
-            atividade1 Mn = new atividade1();
-                           Mn.setVisible(true);
-                           dispose();
-        }*/
         new Thread(){
         @Override
             public void run(){
@@ -85,7 +44,6 @@ public class atividade1 extends javax.swing.JFrame {
         }.start();
     }
     
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -278,31 +236,6 @@ public class atividade1 extends javax.swing.JFrame {
             Mn.setVisible(true);
             dispose();
           }
-       
-       /* else {
-               
-              
-         }
-     
-         else{
-               this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("img/icon_erro.png"))); 
-              
-         }
-        if(this.jTextField1.equals("REAL") && this.jTextField2.equals("LEIA(nota2)") && this.jTextField3.equals("media")){
-        
-            this.jButton4.setIcon((Icon)new ImageIcon(getClass().getResource("img/btnProximo.png")));
-            JOptionPane.showMessageDialog(null,"Todas as linhas estão corretas!! \n O código vai funcionar corretamente parabéns" );
-            
-        }
-         else{
-                             
-               JOptionPane.showMessageDialog(null, "Uma ou mais Linhas estão erradas, tente novamente");
-               atividade1 var = new atividade1();
-               
-          var.setVisible(true);
-          dispose();
-         }*/
-        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
