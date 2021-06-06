@@ -10,36 +10,10 @@ import javax.swing.JOptionPane;
 public class atividade2 extends javax.swing.JFrame {
 
     int vida = 3;
-    public atividade2() {
-        
-        
+    
+    public atividade2() {             
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
-        
-        new Thread(){
-        @Override
-            public void run(){
-                for (int i=0 ; i<=100 ; i++){
-                    try{
-                        sleep(1000);
-                        timebar.setValue(i);
-                        
-                        if(timebar.getValue()==100){
-                           JOptionPane.showMessageDialog(null,"Tempo esgotado!!!");
-                           atividade2 Mn = new atividade2();
-                           Mn.setVisible(true);
-                           dispose();
-                           i = 0;
-                        }
-                        
-                    } catch (InterruptedException ex) {
-                        JOptionPane.showMessageDialog(null, "Erro ao carregar");
-                    }
-                }
-            }
-        
-        }.start();
-        
+        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());              
     }
 
     
@@ -55,12 +29,11 @@ public class atividade2 extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
-        timebar = new javax.swing.JProgressBar();
         status3 = new javax.swing.JLabel();
         status2 = new javax.swing.JLabel();
         status1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         jButton2 = new javax.swing.JButton();
@@ -86,45 +59,42 @@ public class atividade2 extends javax.swing.JFrame {
 
         jTextPane1.setBackground(new java.awt.Color(0, 98, 130));
         jTextPane1.setBorder(null);
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 187, 224));
         jTextPane1.setText("Fase 2");
         jScrollPane1.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 20, 70, 24);
+        jScrollPane1.setBounds(80, 10, 80, 30);
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(250, 250, 80, 20);
+        jTextField1.setBounds(260, 240, 130, 20);
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(240, 340, 60, 20);
+        jTextField2.setBounds(250, 350, 70, 20);
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(293, 425, 90, 20);
+        jTextField3.setBounds(290, 450, 100, 20);
+        getContentPane().add(status3);
+        status3.setBounds(390, 440, 50, 30);
+        getContentPane().add(status2);
+        status2.setBounds(210, 340, 40, 30);
+        getContentPane().add(status1);
+        status1.setBounds(390, 230, 50, 30);
 
         jTextPane3.setEditable(false);
         jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
-        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane3.setBorder(null);
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
-        jTextPane3.setText("Tempo");
+        jTextPane3.setText("Vidas:");
         jScrollPane3.setViewportView(jTextPane3);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(170, 10, 100, 40);
-
-        timebar.setString("0");
-        getContentPane().add(timebar);
-        timebar.setBounds(270, 20, 210, 20);
-        getContentPane().add(status3);
-        status3.setBounds(400, 425, 50, 20);
-        getContentPane().add(status2);
-        status2.setBounds(190, 350, 50, 20);
-        getContentPane().add(status1);
-        status1.setBounds(340, 250, 50, 20);
+        jScrollPane3.setBounds(460, 10, 70, 31);
 
         jTextPane2.setEditable(false);
         jTextPane2.setContentType(""); // NOI18N
@@ -132,7 +102,7 @@ public class atividade2 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(180, 90, 540, 400);
+        jScrollPane2.setBounds(180, 100, 560, 400);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
@@ -180,21 +150,24 @@ public class atividade2 extends javax.swing.JFrame {
             this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));                           
         }
         else{
-               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
+               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+               vida = vida -1;
         }
        
         if(text2.equals("ESCREVA")){
             this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
         else{
-            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png"))); 
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
         }
         
         if(text3.equals("calcular_IMC()")){
             this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
         else{
-            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png"))); 
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
          }
         
         if(text1.equals("RETORNE IMC") && text2.equals("ESCREVA") && text3.equals("calcular_IMC()")){
@@ -267,6 +240,5 @@ public class atividade2 extends javax.swing.JFrame {
     private javax.swing.JLabel status1;
     private javax.swing.JLabel status2;
     private javax.swing.JLabel status3;
-    private javax.swing.JProgressBar timebar;
     // End of variables declaration//GEN-END:variables
 }

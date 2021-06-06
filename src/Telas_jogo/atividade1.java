@@ -9,66 +9,39 @@ import javax.swing.JOptionPane;
 
 public class atividade1 extends javax.swing.JFrame {
 
-  int vida = 3;
-
+    int vida = 3;    
     
-    
-    public atividade1() {
-        
-       
+    public atividade1() {             
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());        
-
-        
-        new Thread(){
-        @Override
-            public void run(){
-                for (int i=0 ; i<=100 ; i++){
-                    try{
-                        sleep(1000);
-                        timebar.setValue(i);
-                        
-                        if(timebar.getValue()==100){
-                           JOptionPane.showMessageDialog(null,"Tempo esgotado!!!");
-                           atividade1 Mn = new atividade1();
-                           Mn.setVisible(true);
-                           dispose();
-                           i = 0;
-                        }
-                        
-                    } catch (InterruptedException ex) {
-                        JOptionPane.showMessageDialog(null, "Erro ao carregar");
-                    }
-                }
-            }
-        
-        }.start();
     }
-    
+  
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBox1 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         status3 = new javax.swing.JLabel();
         status2 = new javax.swing.JLabel();
         status1 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
         jTextField3 = new javax.swing.JTextField();
-        timebar = new javax.swing.JProgressBar();
         jTextField2 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         jButton2 = new javax.swing.JButton();
         Splash_BG = new javax.swing.JLabel();
+
+        jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 630));
@@ -87,30 +60,16 @@ public class atividade1 extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(520, 10, 80, 40);
         getContentPane().add(status3);
-        status3.setBounds(470, 440, 50, 20);
+        status3.setBounds(490, 450, 50, 30);
         getContentPane().add(status2);
-        status2.setBounds(340, 400, 50, 20);
+        status2.setBounds(330, 410, 50, 30);
         getContentPane().add(status1);
         status1.setBounds(430, 310, 50, 40);
-
-        jTextPane3.setEditable(false);
-        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
-        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
-        jTextPane3.setText("Tempo");
-        jScrollPane3.setViewportView(jTextPane3);
-
-        getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(170, 10, 100, 40);
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField3);
         jTextField3.setBounds(450, 460, 40, 20);
-
-        timebar.setString("0");
-        getContentPane().add(timebar);
-        timebar.setBounds(270, 20, 210, 20);
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -137,16 +96,27 @@ public class atividade1 extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(680, 500, 50, 50);
 
+        jTextPane3.setEditable(false);
+        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
+        jTextPane3.setBorder(null);
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
+        jTextPane3.setText("Vidas:");
+        jScrollPane3.setViewportView(jTextPane3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(460, 10, 70, 31);
+
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(0, 98, 130));
         jTextPane1.setBorder(null);
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 187, 224));
         jTextPane1.setText("Fase 1");
         jScrollPane1.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 20, 70, 24);
+        jScrollPane1.setBounds(80, 10, 80, 30);
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -156,7 +126,7 @@ public class atividade1 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(190, 110, 540, 390);
+        jScrollPane2.setBounds(180, 100, 560, 400);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
@@ -243,11 +213,12 @@ public class atividade1 extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-       
-       
+        jButton4.setOpaque(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setBorderPainted(false);
         atividade2 next = new atividade2();
         next.setVisible(true);
-        dispose();
+        dispose();   
     }//GEN-LAST:event_jButton4ActionPerformed
 
   
@@ -264,6 +235,7 @@ public class atividade1 extends javax.swing.JFrame {
     private javax.swing.JLabel Splash_BG;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -279,6 +251,5 @@ public class atividade1 extends javax.swing.JFrame {
     private javax.swing.JLabel status1;
     private javax.swing.JLabel status2;
     private javax.swing.JLabel status3;
-    private javax.swing.JProgressBar timebar;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,32 +13,7 @@ public class atividade3 extends javax.swing.JFrame {
     
     public atividade3() {
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());
-        
-         new Thread(){
-        @Override
-            public void run(){
-                for (int i=0 ; i<=100 ; i++){
-                    try{
-                        sleep(1000);
-                        timebar.setValue(i);
-                        
-                        if(timebar.getValue()==100){
-                           JOptionPane.showMessageDialog(null,"Tempo esgotado!!!");
-                           atividade1 Mn = new atividade1();
-                           Mn.setVisible(true);
-                           dispose();
-                           i = 0;
-                        }
-                        
-                    } catch (InterruptedException ex) {
-                        JOptionPane.showMessageDialog(null, "Erro ao carregar");
-                    }
-                }
-            }
-        
-        }.start();
-        
+        this.setIconImage(new ImageIcon(getClass().getResource("/img/icone.png")).getImage());                
     }
 
     
@@ -49,9 +24,6 @@ public class atividade3 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
-        timebar = new javax.swing.JProgressBar();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jTextField1 = new javax.swing.JTextField();
@@ -63,6 +35,8 @@ public class atividade3 extends javax.swing.JFrame {
         status2 = new javax.swing.JLabel();
         status1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         jButton2 = new javax.swing.JButton();
@@ -85,53 +59,39 @@ public class atividade3 extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(520, 10, 80, 40);
 
-        jTextPane3.setEditable(false);
-        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
-        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
-        jTextPane3.setText("Tempo");
-        jScrollPane3.setViewportView(jTextPane3);
-
-        getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(170, 10, 100, 40);
-
-        timebar.setString("0");
-        getContentPane().add(timebar);
-        timebar.setBounds(270, 20, 210, 20);
-
         jTextPane1.setBackground(new java.awt.Color(0, 98, 130));
         jTextPane1.setBorder(null);
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 187, 224));
         jTextPane1.setText("Fase 3");
         jScrollPane1.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 20, 70, 24);
+        jScrollPane1.setBounds(80, 10, 80, 30);
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(180, 175, 60, 20);
+        jTextField1.setBounds(170, 260, 30, 20);
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(240, 233, 110, 20);
+        jTextField2.setBounds(250, 220, 130, 20);
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(180, 310, 70, 20);
+        jTextField3.setBounds(170, 320, 40, 20);
 
         jTextField4.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(270, 440, 90, 20);
+        jTextField4.setBounds(260, 450, 130, 20);
         getContentPane().add(status4);
-        status4.setBounds(370, 440, 50, 20);
+        status4.setBounds(390, 440, 40, 30);
         getContentPane().add(status3);
-        status3.setBounds(260, 310, 50, 20);
+        status3.setBounds(210, 310, 50, 30);
         getContentPane().add(status2);
-        status2.setBounds(370, 233, 50, 20);
+        status2.setBounds(380, 210, 50, 30);
         getContentPane().add(status1);
-        status1.setBounds(250, 175, 50, 20);
+        status1.setBounds(200, 250, 50, 30);
 
         jButton4.setBackground(new java.awt.Color(102, 255, 255));
         jButton4.setToolTipText("Clique para ir para a próxima tela");
@@ -148,13 +108,24 @@ public class atividade3 extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(680, 500, 50, 50);
 
+        jTextPane3.setEditable(false);
+        jTextPane3.setBackground(new java.awt.Color(0, 98, 130));
+        jTextPane3.setBorder(null);
+        jTextPane3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jTextPane3.setForeground(new java.awt.Color(0, 187, 224));
+        jTextPane3.setText("Vidas:");
+        jScrollPane3.setViewportView(jTextPane3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(460, 10, 70, 31);
+
         jTextPane2.setEditable(false);
         jTextPane2.setContentType(""); // NOI18N
         jTextPane2.setText("Obrigado por me ajudar com o primeiro código, agora teremos um novo desafio por favor veja o código abaixo e complete com os comandos certos para o código funcionar !\n\n\nalgoritmo \"Montando um Sandubão\"\n\nfuncao fazer_Sanduiche(): CARACTERE\n\n    sanduiche : CARACTERE\ninicio\n\tsanduiche := pao + recheio + vegetal\n\t\nfimfuncao\n\nvar\n    pao, recheio, vegetal : CARACTERE\n\n\n\n      ESCREVA (\"Para começar a montar o seu sanduíche, digite um tipo de pão que será utilizado: \")\n      LEIA (pao)\n      ESCREVA (\"Agora que o pao foi escolhido, digite um recheio que você quer no seu sanduiche: \")\n      LEIA (recheio)\n      ESCREVA (\"Hmm, muito bem! Agora escolha um vegetal para acompanhar o seu sanduíche: \")\n      LEIA (vegetal)\n\n      sanduiche := \n\n      ESCREVA (\"Seu sanduiche de \", recheio, \" com \", vegetal, \" está pronto! Bom apetite ^^!\")\nfimalgoritmo");
         jScrollPane2.setViewportView(jTextPane2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(180, 75, 540, 430);
+        jScrollPane2.setBounds(170, 90, 580, 430);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/btnVerif.png"))); // NOI18N
         jButton2.setText("Verificar");
@@ -188,28 +159,32 @@ public class atividade3 extends javax.swing.JFrame {
             this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png"))); 
         }        
         else{
-               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
+               this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+               vida = vida -1;
         }
         
         if(text2.equals("RETORNE sanduiche")){
             this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
         else{
-            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
+            this.status2.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
         }
         
         if(text3.equals("inicio")){
             this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png")));
         }
         else{
-            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png"))); 
+            this.status3.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
         }
         
         if(text4.equals("fazer_Sanduiche()")){
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png"))); 
+            this.status4.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_acerto.png"))); 
         }        
         else{
-            this.status1.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));         
+            this.status4.setIcon((Icon)new ImageIcon(getClass().getResource("/img/icon_erro.png")));
+            vida = vida -1;
         }
         
         if(text1.equals("var") && text2.equals("RETORNE sanduiche") && text3.equals("inicio") && text4.equals("fazer_Sanduiche()")){
@@ -283,6 +258,5 @@ public class atividade3 extends javax.swing.JFrame {
     private javax.swing.JLabel status2;
     private javax.swing.JLabel status3;
     private javax.swing.JLabel status4;
-    private javax.swing.JProgressBar timebar;
     // End of variables declaration//GEN-END:variables
 }
